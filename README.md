@@ -86,22 +86,10 @@ _____
 
 | Paso de la receta | Instrucción de C++ que lo implementa |
 |---|---|
-| 1. Mensaje de bienvenida |std::cout << "el mayor de 3 :V" << endl;
- |
-| 2. Pedir los 3 números | std::cout <<"numero 1=";
-      std:: cin >> numero1;
-          std::cout <<"numero 2=";
-                std:: cin >> numero2;
-                          std::cout <<"numero 3=";
-                                          std:: cin >> numero3 ; |
-| 3. Guardar los números en variables| std:: cin >> numero1;
-                std:: cin >> numero2;
-                                                          std:: cin >> numero3 ; |
-
- |
-| 4. Analizar cuál es el mayor | if(numero1>numero2 && numero1>numero3) { std:: cout << "mayor=" << numero1 << std::endl;}
-   if(numero2>numero1 && numero2>numero3) { std:: cout << "mayor=" << numero2 << std::endl;}
-      if(numero3>numero1 && numero3>numero2) { std:: cout << "mayor=" << numero3 << std::endl;} |
+| 1. Mensaje de bienvenida |std::cout << "el mayor de 3 :V" << endl; |
+| 2. Pedir los 3 números | std::cout <<"numero 1=";std::cout <<"numero 2=";std::cout <<"numero 2=";|
+| 3. Guardar los números en variables| std:: cin >> numero1;std:: cin >> numero2;std:: cin >> numero3 ;|
+| 4. Analizar cuál es el mayor | if(numero1>numero2 && numero1>numero3) |
 | 5. Imprimir el resultado | std:: cout << "mayor=" << numero3 << std::endl; |
 
 **¿Hubo algún paso de mi receta que me costó traducir a C++? ¿Cuál y por qué?**
@@ -140,36 +128,36 @@ ninguno ya habia hecho el codigo
 
 | # | ¿Qué falló o qué quise mejorar? | ¿Qué cambié? | ¿Funcionó? |
 |---|---|---|---|
-| 1 | _____ | _____ | _____ |
-| 2 | _____ | _____ | _____ |
+| 1 | algo para que cuando ponga una letra no se corrompa y se empice desde 0 | aun no lo hago es una sugerencia o mejora continua | no |
+| 2 | El programa imprimía varias veces el mismo número cuando había empates | Reemplacé varios if independientes por una cadena if / else if / else | si |
 
-**Reto elegido (opcional):** _____
+**Reto elegido (opcional):** validar entradas
 
 ## 12. Dudas para el profesor (Fase 3)
 
 | Duda | Lo que ya intenté |
 |---|---|
-| _____ | _____ |
+| ninguna | nada |
 
 ## 13. Reflexión final
 
 **¿Qué aprendí con esta práctica?**
-_____
+un poco mas sobre el uso de else y if
 
 **Ahora que terminé, ¿qué cambiaría de mi proceso?**
-_____
+nada funciona
 
 **¿Qué fue lo más difícil y cómo lo resolví?**
-_____
+hacer los if para que entendieran cual es el numero mayor
 
 **¿Qué pregunta me quedó sin responder?**
-_____
+ninguna
 
 **¿Qué fue más fácil para mí: la Práctica 3 (receta propia con un paso de ejemplo), la 4 (receta ajena) o esta (todo desde cero)? ¿Por qué?**
-_____
+todo desde 0 porque entiendo un poco mas el problema
 
 **¿Pensé en los empates antes de programar o los descubrí al probar?**
-_____
+al probar
 
 ## 14. Lista de verificación antes de entregar (Fase 5)
 

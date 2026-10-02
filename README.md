@@ -3,7 +3,7 @@
 > **En esta práctica todo es tuyo:** el análisis, la receta, el código y las pruebas. Llena cada sección en la fase que se indica.
 
 ## 1. Descripción del problema (Fase 1)
-<!-- Explica con tus palabras qué hace tu programa y para qué serviría en la vida real. Máximo 4 líneas. -->
+el progama sirve para analizar 3 numeros (a, b c,) y saber cual de esos 3 es el mas grande de esos 3 numeros por ej el programa te va a dar el mensaje de bienvenida despues te va a preguntar 3(a, b c,) numeros despues de eso tu vas a tener que ingresarlos en la terminal (1,2,3) despues de eso el programa los va a guardar en variables los va a analizar y va a ver cual de esos 3 numeros es el mas grande depues de tenerminar todo ese proceso los va a imprimir y te va a decir cual de esos 3 numeros es el mas grande (3) <!-- Explica con tus palabras qué hace tu programa y para qué serviría en la vida real. Máximo 4 líneas. -->
 
 _____
 
@@ -11,55 +11,56 @@ _____
 <!-- Define cada entrada y cada salida, con su tipo de dato y su objetivo. -->
 
 **Entradas:**
-1. _____
-2. _____
-3. _____
+1. 2
+2. 4
+3. 5
 
 **Salida:**
-1. _____
+1. 5
 
 **¿Muestro el valor del mayor o cuál de los tres fue (primero, segundo o tercero)? ¿Por qué?**
-_____
+mas util mostrar el numero mayor que decir que otro numero fue menor
 
 **¿Qué función de `utilerias.h` uso para leer los números? ¿Por qué esa y no la otra?**
-_____
+como una biblioteca de apoyo porque contiene ya funciones preparadas y para leer enteros se usa función leerEntero().
 
 ## 3. Restricciones e invariante (Fases 1 y 2)
 
 **Restricciones** (¿qué debe cumplirse?):
-- _____
-- _____
+- los numeros deben de ser validos
+- el programa compara los 3 valores y elige uno como mayor sin importar el orden
 
 **¿Hace falta validar el rango de los números (por ejemplo, rechazar el 0 o los negativos)? ¿Por qué?**
-_____
+no es necesario porque el programa solo pide encontrar el mayor
 
 **¿Qué hace mi programa cuando dos números son iguales y son los mayores? ¿Y cuando los tres son iguales?**
-_____
+dos iguales el programa mostrar el valor repetido como el mayor
+3 iguales el programa igual mostrara el numero
 
 **¿Quién detecta cada error?** (¿qué revisa la función de `utilerias.h` y qué reviso yo?)
-_____
+utilerias valida que el usuario realmente ingrese un numero
+y yo reviso que este todo bien
 
 **Invariante** (justo antes de mostrar el resultado, ¿qué es seguro sobre el valor que voy a mostrar?):
-_____
-
+ese valor es mayor o igual que los otros 2
 ## 4. Casos resueltos a mano (Fase 1)
 
 | Caso | Número 1 | Número 2 | Número 3 | Mayor calculado a mano |
 |---|---|---|---|---|
-| 1 (el mayor en primera posición) | _____ | _____ | _____ | _____ |
-| 2 (el mayor en segunda posición) | _____ | _____ | _____ | _____ |
-| 3 (el mayor en tercera posición) | _____ | _____ | _____ | _____ |
-| 4 (con un empate) | _____ | _____ | _____ | _____ |
-| 5 (con negativos) | _____ | _____ | _____ | _____ |
+| 1 (el mayor en primera posición) | 9 | 4 | 5 | 9 |
+| 2 (el mayor en segunda posición) | 3 | 10 | 7 | 10 |
+| 3 (el mayor en tercera posición) | 2 | 8 | 15 | 15 |
+| 4 (con un empate) | 6 | 6 | 4 | 6 |
+| 5 (con negativos) | -3 | -7 | -1 | -1 |
 
 ## 5. Receta en pseudocódigo (Fase 2)
 <!-- Tu receta va en el archivo RECETA.md. Aquí solo responde las preguntas. -->
 
-**¿Probé mi receta a mano con mis 5 casos?** Sí / No
-**¿Tuve que corregirla? ¿Qué cambié?** _____
-**¿Cuántas versiones de mi receta escribí hasta la final?** _____
+**¿Probé mi receta a mano con mis 5 casos?** Sí 
+**¿Tuve que corregirla? ¿Qué cambié?** no
+**¿Cuántas versiones de mi receta escribí hasta la final?** 1
 **¿Se me ocurrió otra forma de resolver el problema? ¿Cuál? ¿Por qué elegí la que usé?**
-_____
+no se me ocurrio otra
 
 ## 6. Cómo compilar y ejecutar (Fase 3)
 
@@ -69,7 +70,12 @@ g++ -Wall -Wextra -std=c++17 main.cpp -o numero_mayor
 ```
 
 ## 7. Ejemplo de ejecución (Fase 3)
-<!-- Pega aquí lo que muestra tu programa en pantalla con un caso de empate (por ejemplo 7, 7 y 3). -->
+PS C:\Users\taqui\Documents\ulsa_ime_1_dp_numero_mayor> ./main.exe
+el mayor de 3 :V
+numero 1=1
+numero 2=2
+numero 3=3
+mayor=3<!-- Pega aquí lo que muestra tu programa en pantalla con un caso de empate (por ejemplo 7, 7 y 3). -->
 
 ```
 _____
@@ -80,43 +86,55 @@ _____
 
 | Paso de la receta | Instrucción de C++ que lo implementa |
 |---|---|
-| 1. Mensaje de bienvenida | _____ |
-| _____ | _____ |
-| _____ | _____ |
-| _____ | _____ |
-| _____ | _____ |
+| 1. Mensaje de bienvenida |std::cout << "el mayor de 3 :V" << endl;
+ |
+| 2. Pedir los 3 números | std::cout <<"numero 1=";
+      std:: cin >> numero1;
+          std::cout <<"numero 2=";
+                std:: cin >> numero2;
+                          std::cout <<"numero 3=";
+                                          std:: cin >> numero3 ; |
+| 3. Guardar los números en variables| std:: cin >> numero1;
+                std:: cin >> numero2;
+                                                          std:: cin >> numero3 ; |
+
+ |
+| 4. Analizar cuál es el mayor | if(numero1>numero2 && numero1>numero3) { std:: cout << "mayor=" << numero1 << std::endl;}
+   if(numero2>numero1 && numero2>numero3) { std:: cout << "mayor=" << numero2 << std::endl;}
+      if(numero3>numero1 && numero3>numero2) { std:: cout << "mayor=" << numero3 << std::endl;} |
+| 5. Imprimir el resultado | std:: cout << "mayor=" << numero3 << std::endl; |
 
 **¿Hubo algún paso de mi receta que me costó traducir a C++? ¿Cuál y por qué?**
-_____
-
+ninguno ya habia hecho el codigo
 ## 9. Experimentos (Fase 3)
 
 **Experimento A: ¿qué te dijo el compilador con `if (a > b > c)`? ¿Qué mostró el programa con 3, 2 y 1? ¿Por qué?**
-_____
+3 es el mayor
 
 **Experimento B: al cambiar `>=` por `>` (o al revés), ¿qué mostró el programa con 7, 7, 3 y con 5, 5, 5? ¿Por qué?**
-_____
+> sirve para detectar estrictamente un numero mayor
+>= es mas seguro porque si hay empates igual se muestra el valor correcto
 
 **Experimento C (opcional): con `if (a = b)`, ¿qué te dijo el compilador? ¿Qué le pasó al valor de `a`?**
-_____
+= asigna == compara
 
 ## 10. Tabla de pruebas (Fase 4)
 
 | Caso | Entradas | Esperado | Obtenido | ¿Pasó? |
 |---|---|---|---|---|
-| Mayor primero | 9, 4, 2 | 9 | _____ | _____ |
-| Mayor en medio | 4, 9, 2 | 9 | _____ | _____ |
-| Mayor al final | 2, 4, 9 | 9 | _____ | _____ |
-| Empate arriba (1.º y 2.º) | 7, 7, 3 | 7 | _____ | _____ |
-| Empate arriba (1.º y 3.º) | 7, 3, 7 | 7 | _____ | _____ |
-| Empate abajo | 8, 3, 3 | 8 | _____ | _____ |
-| Los tres iguales | 5, 5, 5 | 5 | _____ | _____ |
-| Todos negativos | -4, -1, -9 | -1 | _____ | _____ |
-| Con cero | -2, 0, -5 | 0 | _____ | _____ |
-| Decimales cercanos | 2.5, 2.7, 2.6 | 2.7 | _____ | _____ |
-| Texto | `abc` (luego 3), 1, 2 | vuelve a pedir el dato; 3 | _____ | _____ |
-| Caso propio 1 | _____ | _____ | _____ | _____ |
-| Caso propio 2 | _____ | _____ | _____ | _____ |
+| Mayor primero | 9, 4, 2 | 9 | 9 | si |
+| Mayor en medio | 4, 9, 2 | 9 | 9 | si |
+| Mayor al final | 2, 4, 9 | 9 | 9 | si |
+| Empate arriba (1.º y 2.º) | 7, 7, 3 | 7 | 7 | si |
+| Empate arriba (1.º y 3.º) | 7, 3, 7 | 7 | 7 | si |
+| Empate abajo | 8, 3, 3 | 8 | 8 | si |
+| Los tres iguales | 5, 5, 5 | 5 | 5 | si |
+| Todos negativos | -4, -1, -9 | -1 | -1 | si |
+| Con cero | -2, 0, -5 | 0 | 0 | si |
+| Decimales cercanos | 2.5, 2.7, 2.6 | 2.7 | 2.7 | si |
+| Texto | `abc` (luego 3), 1, 2 | vuelve a pedir el dato; 3 | vuelve a pedir el dato; 3 | si |
+| Caso propio 1 | 12, 7, 11 | 12 | 12 | si |
+| Caso propio 2 | -10, -3, -7 | -3 | -3 | si |
 
 ## 11. Bitácora de mejoras (Fase 4)
 

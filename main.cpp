@@ -25,8 +25,8 @@ int main() {
                                           std:: cin >> numero3 ;
 
 if(numero1>=numero2 && numero1>=numero3) { std:: cout << "mayor=" << numero1 << std::endl;}
-   if(numero2>=numero1 && numero2>=numero3) { std:: cout << "mayor=" << numero2 << std::endl;}
-      if(numero3>=numero1 && numero3>=numero2) { std:: cout << "mayor=" << numero3 << std::endl;}
+   else if(numero2>=numero1 && numero2>=numero3) { std:: cout << "mayor=" << numero2 << std::endl;}
+      else if(numero3>=numero1 && numero3>=numero2) { std:: cout << "mayor=" << numero3 << std::endl;}
 
 
 
